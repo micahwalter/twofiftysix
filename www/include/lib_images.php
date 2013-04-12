@@ -28,15 +28,13 @@
 
 		if (!$ret['ok']) return $ret;
 
-
 		#
 		# cache the unescaped version
 		#
 
-		# $image['id'] = $ret['insert_id'];
+		$image['id'] = $ret['insert_id'];
 
-		# cache_set("USER-{$image['id']}", $image);
-
+		cache_set("USER-{$image['id']}", $image);
 		return array(
 			'ok'	=> 1,
 			'image'	=> $image,
