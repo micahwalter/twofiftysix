@@ -2,9 +2,8 @@
 
 <div class="container">
   <div class="hero-unit">
-	<img src="{$random_dot_image.url}" /><br /><br />
-	{$random_dot_image|@dumper}
-	{$artisanal_integer|@dumper}
+	<img src="{$rsp.image.url}" /><br /><br />
+	{$rsp|@dumper}
   </div>
 </div>
 

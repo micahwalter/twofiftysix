@@ -25,3 +25,15 @@ CREATE TABLE `users_password_reset` (
   KEY `by_user` (`user_id`),
   KEY `by_timestamp` (`created`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+DROP TABLE IF EXISTS `images`;
+
+CREATE TABLE `images` (
+  `id` bigint(20) unsigned NOT NULL,
+  `url` varchar(255) DEFAULT NULL,
+  `image_type` varchar(15) DEFAULT NULL,
+  `created` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `by_timestamp` (`created`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

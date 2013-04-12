@@ -6,7 +6,7 @@
 	include('include/init.php');
 	loadlib("twofiftysix");
 	loadlib("artisanal_integers");
-
+	loadlib("images");
 
 	#
 	# this is so we can test the logging output
@@ -32,9 +32,14 @@
 		$artisanal_integer = artisanal_integers_create('brooklyn');
 	}
 	
+	$image['url'] = $random_dot_image['url'];
+	$image['id'] = $artisanal_integer['integer'];
+	$image['image_type'] = 'random_dot';
+	
+	$rsp = images_create_image($image);
+	
 	#
 	# output
 	#
-	$smarty->assign('random_dot_image', $random_dot_image);
-	$smarty->assign('artisanal_integer', $artisanal_integer);
+	$smarty->assign('rsp', $rsp);
 	$smarty->display('page_index.txt');
