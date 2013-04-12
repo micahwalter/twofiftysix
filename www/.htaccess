@@ -71,7 +71,7 @@ RewriteRule ^about$			about.php 		[L,QSA]
 RewriteRule ^contact$			contact.php 		[L,QSA]
 
 # Images
-RewriteRule  ^images/([0-9]+)/?$		image.php?id=$1&%{QUERY_STRING}	[L]
+RewriteRule  ^image/([0-9]+)/?$		image.php?id=$1&%{QUERY_STRING}	[L]
 
 # Test pages
 

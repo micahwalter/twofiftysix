@@ -1,9 +1,12 @@
+{capture assign="title"}{$image.id}{/capture}
+{capture assign="page_title"}Image | {$title}{/capture}
 {include file='inc_head.txt'}
 
 <div class="container">
 	<h1>{$image.id}</h1>
     <img src="{$image.url}" /><br/><br/>
-	<p>Type: {$image.image_type}</p>
+	<p>Type: {assign var="image_type" value="_"|explode:$image.image_type}{$image_type.0|@ucfirst} {$image_type.1|@ucfirst}</p>
+	<p>Created: {$image.created|date_format:"%A, %B %e, %Y at %H:%M:%S"}</p>
 	<p>Download: <a href="{$image.url}">{$image.url}</a></p>
 </div>
 
