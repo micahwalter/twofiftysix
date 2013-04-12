@@ -42,3 +42,13 @@
 		
 	}
 
+	#################################################################
+
+	function images_get_by_id($id){
+
+		$image = db_single(db_fetch("SELECT * FROM images WHERE id=".intval($id)));
+
+		cache_set("IMAGE-{$image['id']}", $image);
+
+		return $image;
+	}

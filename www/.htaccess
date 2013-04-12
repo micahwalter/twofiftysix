@@ -70,6 +70,8 @@ RewriteRule  ^account/delete$		account_delete.php	[L]
 RewriteRule ^about$			about.php 		[L,QSA]
 RewriteRule ^contact$			contact.php 		[L,QSA]
 
+# Images
+RewriteRule  ^images/([0-9]+)/?$		image.php?id=$1&%{QUERY_STRING}	[L]
 
 # Test pages
 

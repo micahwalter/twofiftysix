@@ -1,0 +1,10 @@
+{include file='inc_head.txt'}
+
+<div class="container">
+	<h1>{$image.id}</h1>
+    <img src="{$image.url}" /><br/><br/>
+	<p>Type: {$image.image_type}</p>
+	<p>Download: <a href="{$image.url}">{$image.url}</a></p>
+</div>
+
+{include file='inc_foot.txt'}
