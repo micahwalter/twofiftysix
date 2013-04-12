@@ -1,0 +1,11 @@
+{include file='inc_head.txt' nav_tab='home'}
+
+<div class="container">
+  <div class="hero-unit">
+	<img src="{$random_dot_image.url}" /><br /><br />
+	{$random_dot_image|@dumper}
+	{$artisanal_integer|@dumper}
+  </div>
+</div>
+
+{include file='inc_foot.txt'}
